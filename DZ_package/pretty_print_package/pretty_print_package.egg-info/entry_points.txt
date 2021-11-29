@@ -1,0 +1,3 @@
+[console_scripts]
+get_time_pp = pretty_print_package.pretty_print:main
+

@@ -1,0 +1,8 @@
+setup.py
+pretty_print_package/pretty_print.py
+pretty_print_package.egg-info/PKG-INFO
+pretty_print_package.egg-info/SOURCES.txt
+pretty_print_package.egg-info/dependency_links.txt
+pretty_print_package.egg-info/entry_points.txt
+pretty_print_package.egg-info/requires.txt
+pretty_print_package.egg-info/top_level.txt

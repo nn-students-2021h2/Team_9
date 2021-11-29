@@ -1,0 +1,3 @@
+[console_scripts]
+get_time = get_time_package.get_time:main
+
