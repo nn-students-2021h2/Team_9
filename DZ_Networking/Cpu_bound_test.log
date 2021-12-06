@@ -2,3 +2,8 @@
 2021-12-06 23:42:19,635 - Cpu_bound_test - Pure_socket_server fibonacci of 25 calculate for 4.79432225227356
 2021-12-06 23:46:57,459 - Cpu_bound_test - Selector_server fibonacci of 25 calculate for 0.7350335121154785
 2021-12-06 23:49:31,563 - Cpu_bound_test - Selectors_server fibonacci of 25 calculate for 0.7619962692260742
+2021-12-07 01:03:04,341 - cpu_bound_test - Pure_socket_server fibonacci of 25 calculate for 0.5582435131072998
+2021-12-07 01:07:51,957 - Cpu_bound_test - Flask_server fibonacci of 25 calculate for 0.811215877532959
+2021-12-07 01:09:23,507 - Cpu_bound_test - Flask_server fibonacci of 25 calculate for 0.7696514129638672
+2021-12-07 01:09:30,343 - Cpu_bound_test - Flask_server fibonacci of 25 calculate for 0.7416942119598389
+2021-12-07 01:09:36,195 - Cpu_bound_test - Flask_server fibonacci of 25 calculate for 0.8204889297485352

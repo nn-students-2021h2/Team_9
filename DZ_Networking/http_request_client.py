@@ -6,7 +6,7 @@ def flask_echo_test():
     logger = get_logger('Echo_test')
     g_data= {'text': 'echo'}
     n = 50
-    t_diff = 0
+    t_diff = 0  
     while t_diff < 1:
         t_start = time.time()
         for i in range(n):

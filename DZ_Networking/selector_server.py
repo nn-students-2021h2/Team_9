@@ -24,8 +24,8 @@ def send_message(client_sock: socket.socket) -> None:
     request = client_sock.recv(4096).decode('utf-8')
     if request:
         some = request[0:5]
-        num = int(request[5:])
         if some == "data:":
+            num = int(request[5:])
             client_sock.send(str(fibonacci_of(num)).encode())
         else:    
             client_sock.send(request.encode())

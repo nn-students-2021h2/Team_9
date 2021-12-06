@@ -44,7 +44,7 @@ def cpu_bound_server_test(server_name: str, host: str, port: int, log_name: str)
 
 
 def main():
-    cpu_bound_server_test(server_name="Selectors_server", host="localhost", port=8090, log_name='Cpu_bound_test')
+    cpu_bound_server_test(server_name="Pure_socket_server", host="localhost", port=8090, log_name='cpu_bound_test')
 
 if __name__ == "__main__":
     main()
