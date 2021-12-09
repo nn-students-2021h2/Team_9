@@ -29,7 +29,7 @@ def cpu_bound_server_test(server_name: str, host: str, port: int, log_name: str)
     client_socket = socket.socket()
     server_host = host
     server_port = port
-    n = 25
+    n = 27
     client_socket.connect((server_host, server_port))
 
     t_start = time.time()
