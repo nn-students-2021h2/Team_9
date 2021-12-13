@@ -18,7 +18,7 @@ def flask_echo_test():
 
 def flask_cpu_bound_test():
     logger = get_logger('Cpu_bound_test')
-    g_data= {'n': '27'}
+    g_data= {'n': '30'}
     t_start = time.time()
     r = requests.get('http://127.0.0.1:5000/cpu_bound', params=g_data)
     print(r.text)

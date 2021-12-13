@@ -29,13 +29,13 @@ def cpu_bound_server_test(server_name: str, host: str, port: int, log_name: str)
     client_socket = socket.socket()
     server_host = host
     server_port = port
-    n = 27
+    n = 30
     client_socket.connect((server_host, server_port))
 
     t_start = time.time()
     client_socket.send(f"data:{n}".encode())
     response = client_socket.recv(4096)
-    print(response)
+    #print(response)
     t_end = time.time()
     t_diff = t_end - t_start
     
@@ -44,7 +44,7 @@ def cpu_bound_server_test(server_name: str, host: str, port: int, log_name: str)
 
 
 def main():
-    cpu_bound_server_test(server_name="Pure_socket_server", host="localhost", port=8090, log_name='cpu_bound_test')
+    cpu_bound_server_test(server_name="Selectors_server", host="localhost", port=8090, log_name='cpu_bound_test')
 
 if __name__ == "__main__":
     main()

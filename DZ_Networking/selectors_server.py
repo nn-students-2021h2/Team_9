@@ -1,6 +1,7 @@
 import selectors
 import socket
 from fibonacci import fibonacci_of
+import time
 
 selector = selectors.DefaultSelector()
 
@@ -33,7 +34,16 @@ def send_message(client_sock: socket.socket) -> None:
         some = request[0:5]
         num = int(request[5:])
         if some == "data:":
-            client_sock.send(str(fibonacci_of(num)).encode())
+            t_start = time.time()
+            ###
+            f = fibonacci_of(num)
+            ###
+            t_end = time.time()
+
+            t_diff = t_end - t_start
+            print(t_diff)
+            
+            client_sock.send(str(f).encode())
         else:    
             client_sock.send(request.encode())
     else:

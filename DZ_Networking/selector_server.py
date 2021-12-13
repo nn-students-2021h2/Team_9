@@ -1,6 +1,8 @@
 import socket
 from select import select
 from fibonacci import fibonacci_of
+import time
+
 
 def get_server_socket():
     server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -26,7 +28,15 @@ def send_message(client_sock: socket.socket) -> None:
         some = request[0:5]
         if some == "data:":
             num = int(request[5:])
-            client_sock.send(str(fibonacci_of(num)).encode())
+            t_start = time.time()
+            ###
+            f = fibonacci_of(num)
+            ###
+            t_end = time.time()
+
+            t_diff = t_end - t_start
+            print(t_diff)
+            client_sock.send(str(f).encode())
         else:    
             client_sock.send(request.encode())
     else:

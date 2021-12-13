@@ -1,6 +1,7 @@
 import socket
 import json
 from fibonacci import fibonacci_of
+import time
 
 def get_server_socket():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -24,7 +25,17 @@ while True:
         else:
             if some == "data:":
                 print('test')
-                client_socket.send(str(fibonacci_of(int(request[5:]))).encode())
+                num = int(request[5:])
+
+                t_start = time.time()
+                ###
+                f = fibonacci_of(num)
+                ###
+                t_end = time.time()
+
+                t_diff = t_end - t_start
+                print(t_diff)
+                client_socket.send(str(f).encode())
             else:    
                 client_socket.send(request.encode())
     client_socket.close()
